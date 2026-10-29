@@ -4,7 +4,7 @@ A responsive personal CV website that presents my profile, education, technical 
 
 ## Live Website
 
-[VERCEL LINK TO BE ADDED AFTER DEPLOYMENT]
+[https://vince-quita-cv.vercel.app](https://vince-quita-cv.vercel.app)
 
 ## Student Information
 

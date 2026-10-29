@@ -514,3 +514,128 @@ button {
   background: rgba(255, 179, 102, 0.15);
   color: var(--accent);
 }
+
+/* =========================================
+   9. SKILLS
+   ========================================= */
+.skill-list {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 720px;
+  margin-bottom: 3.5rem;
+}
+
+.skill__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.skill__level {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted-on-light);
+}
+
+.skill__bar {
+  height: 12px;
+  overflow: hidden;
+  background: rgba(43, 43, 46, 0.12);
+  border-radius: 999px;
+}
+
+/* Starts empty; JavaScript fills it to its data-level in Step 6 */
+.skill__fill {
+  width: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-deep));
+  transition: width 1.2s ease;
+}
+
+.subsection__title {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.soft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.soft-card {
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  text-align: center;
+  background: var(--bg-dark);
+  color: var(--accent);
+  transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.soft-card:hover {
+  transform: translateY(-6px);
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+/* =========================================
+   10. CONTACT
+   ========================================= */
+.contact {
+  max-width: 640px;
+  padding: 2.5rem;
+  background: #fff;
+  border-top: 5px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.contact__text {
+  margin-bottom: 1.5rem;
+  color: var(--muted-on-light);
+}
+
+.contact__list {
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.contact__list strong {
+  display: inline-block;
+  min-width: 80px;
+  color: var(--accent-deep);
+}
+
+.contact__list a {
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.contact__list a:hover {
+  color: var(--accent-deep);
+  border-color: var(--accent-deep);
+}
+
+.contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+.footer {
+  padding: 1.75rem 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  background: var(--bg-dark);
+  color: var(--muted-on-dark);
+  border-top: 1px solid rgba(255, 179, 102, 0.15);
+}

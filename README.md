@@ -11,7 +11,7 @@ A responsive personal CV website that presents my profile, education, technical 
 - **Name:** Vince Francis B. Quita
 - **Program:** Bachelor of Science in Information Technology
 - **School:** Davao del Norte State College
-- **Course:** [COURSE NAME AND CODE]
+- **Course:** IT415
 
 ## Features
 

@@ -1,0 +1,151 @@
+/* =========================================
+   1. VARIABLES
+   ========================================= */
+:root {
+  /* Colors */
+  --bg-dark: #2B2B2E;
+  --surface-dark: #38383C;
+  --accent: #FFB366;
+  --accent-light: #FFD9B3;
+  --accent-deep: #B35A00;
+  --bg-light: #FFF6EC;
+  --text-light: #F5F1EA;
+  --text-dark: #2B2B2E;
+  --muted-on-dark: #B9B4AB;
+  --muted-on-light: #6B6560;
+
+  /* Typography and spacing */
+  --font-main: 'DM Sans', sans-serif;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --transition: 0.3s ease;
+  --navbar-height: 72px;
+}
+
+/* =========================================
+   2. RESET AND BASE STYLES
+   ========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* =========================================
+   3. LAYOUT HELPERS
+   ========================================= */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section--dark {
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.section--light {
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.section__title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.section__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-top: 0.6rem;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* =========================================
+   4. BUTTONS
+   ========================================= */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+.btn--primary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  transform: translateY(-3px);
+}
+
+.btn--outline {
+  color: var(--accent);
+}
+
+.btn--outline:hover {
+  background: var(--accent);
+  color: var(--bg-dark);
+  transform: translateY(-3px);
+}
+
+/* Outline buttons on cream need a darker orange to stay readable */
+.section--light .btn--outline {
+  color: var(--accent-deep);
+  border-color: var(--accent-deep);
+}
+
+.section--light .btn--outline:hover {
+  background: var(--accent-deep);
+  color: var(--bg-light);
+}

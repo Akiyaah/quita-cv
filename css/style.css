@@ -753,3 +753,88 @@ button {
     text-align: center;
   }
 }
+
+/* =========================================
+   14. LOADING SCREEN
+   ========================================= */
+.loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--bg-dark);
+  z-index: 1000;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader__spinner {
+  width: 56px;
+  height: 56px;
+  border: 5px solid rgba(255, 179, 102, 0.2);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+.loader__text {
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--accent-light);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   15. SCROLL REVEAL
+   ========================================= */
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible {
+  opacity: 1;
+  animation: reveal-up 0.8s ease backwards;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect visitors who turn off animations in their system settings */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+  }
+
+  .reveal.visible {
+    animation: none;
+  }
+
+  .skill__fill,
+  .loader {
+    transition: none;
+  }
+}

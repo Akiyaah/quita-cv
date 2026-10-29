@@ -3,11 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My CV</title>
+  <meta name="description" content="Personal CV website of [YOUR FULL NAME], BSIT student at Davao del Norte State College.">
+  <title>Vince Francis B. Quita | CV</title>
+
+  <!-- Google Fonts: DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>CV coming soon</h1>
+
+  <!-- Loading screen -->
+  <div class="loader" id="loader">
+    <div class="loader__spinner"></div>
+    <p class="loader__text">Loading...</p>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+<a href="#home" class="navbar__logo">VFQ<span>.</span></a>
+
+    <button class="navbar__toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero / Personal Profile -->
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <p class="hero__greeting">Hello, I'm</p>
+        <h1 class="hero__name">Vince Franics B. Quita</h1>
+        <h2 class="hero__title">Junior Game Developer and Gameplay Programmer</h2>
+        <p class="hero__intro">I am a Bachelor of Science in Information Technology student at Davao del Norte State College who aims to become a Junior Game Developer and Gameplay Programmer. I am building my skills in basic programming and problem-solving, and I work to communicate clearly, adapt to new challenges, and manage my time well.</p>
+        <p class="hero__objective"><strong>Career Objective:</strong> To start my career as a Junior Game Developer and Gameplay Programmer, where I can apply my programming and problem-solving skills, work well with a team, and keep learning in the game development industry.</p>
+        <div class="hero__buttons">
+          <a href="#contact" class="btn btn--primary">Contact Me</a>
+          <a href="#projects" class="btn btn--outline">View Projects</a>
+        </div>
+      </div>
+
+      <div class="hero__image">
+        <img src="assets/images/profile.jpg" alt="Portrait of [YOUR FULL NAME]">
+      </div>
+    </section>
+
+<!-- About -->
+<section class="section section--light" id="about">
+  <div class="container">
+    <h2 class="section__title reveal">About Me</h2>
+    <div class="about reveal">
+      <p class="about__text">I am a Bachelor of Science in Information Technology student at Davao del Norte State College. I want to become a Junior Game Developer and Gameplay Programmer. I work with Python, JavaScript, SQL, C#, and C++ at a beginner to intermediate level, and I am still learning and improving them.</p>
+      <ul class="about__facts">
+        <li><strong>Name:</strong> Vince Francis B. Quita</li>
+        <li><strong>School:</strong> Davao del Norte State College</li>
+        <li><strong>Program:</strong> Bachelor of Science in Information Technology</li>
+        <li><strong>Goal:</strong> Junior Game Developer and Gameplay Programmer</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section class="section section--dark" id="education">
+  <div class="container">
+    <h2 class="section__title reveal">Education</h2>
+    <div class="card-grid">
+      <article class="card reveal">
+        <span class="card__year">[YEARS, e.g. 2022 - Present]</span>
+        <h3 class="card__title">Bachelor of Science in Information Technology</h3>
+        <p class="card__subtitle">Davao del Norte State College</p>
+        <p class="card__text">[YEAR LEVEL]</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__year">[YEARS]</span>
+        <h3 class="card__title">Senior High School</h3>
+        <p class="card__subtitle">[SENIOR HIGH SCHOOL NAME]</p>
+        <p class="card__text">[STRAND]</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section class="section section--light" id="skills">
+  <div class="container">
+    <h2 class="section__title reveal">Technical Skills</h2>
+    <div class="skill-list">
+      <div class="skill reveal">
+        <div class="skill__info"><span class="skill__name">Python</span><span class="skill__level">Beginner to Intermediate</span></div>
+        <div class="skill__bar"><div class="skill__fill" data-level="55"></div></div>
+      </div>
+      <div class="skill reveal">
+        <div class="skill__info"><span class="skill__name">JavaScript</span><span class="skill__level">Beginner to Intermediate</span></div>
+        <div class="skill__bar"><div class="skill__fill" data-level="55"></div></div>
+      </div>
+      <div class="skill reveal">
+        <div class="skill__info"><span class="skill__name">SQL</span><span class="skill__level">Beginner to Intermediate</span></div>
+        <div class="skill__bar"><div class="skill__fill" data-level="55"></div></div>
+      </div>
+      <div class="skill reveal">
+        <div class="skill__info"><span class="skill__name">C#</span><span class="skill__level">Beginner to Intermediate</span></div>
+        <div class="skill__bar"><div class="skill__fill" data-level="55"></div></div>
+      </div>
+      <div class="skill reveal">
+        <div class="skill__info"><span class="skill__name">C++</span><span class="skill__level">Beginner to Intermediate</span></div>
+        <div class="skill__bar"><div class="skill__fill" data-level="55"></div></div>
+      </div>
+    </div>
+
+    <h3 class="subsection__title reveal">Soft Skills</h3>
+    <div class="soft-grid">
+      <div class="soft-card reveal">Problem-Solving</div>
+      <div class="soft-card reveal">Communication Skills</div>
+      <div class="soft-card reveal">Adaptability</div>
+      <div class="soft-card reveal">Time Management</div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
   <script src="js/script.js"></script>
 </body>
 </html>

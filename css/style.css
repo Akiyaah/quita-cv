@@ -639,3 +639,117 @@ button {
   color: var(--muted-on-dark);
   border-top: 1px solid rgba(255, 179, 102, 0.15);
 }
+
+/* =========================================
+   12. RESPONSIVE: TABLET AND BELOW
+   ========================================= */
+@media (max-width: 900px) {
+  /* Navigation becomes a hamburger menu */
+  .navbar {
+    padding: 0 1.25rem;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0 1.5rem;
+    background: var(--bg-dark);
+    border-bottom: 1px solid rgba(255, 179, 102, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+  }
+
+  .navbar__links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navbar__links li {
+    text-align: center;
+  }
+
+  .navbar__links a {
+    display: block;
+    padding: 0.9rem 0;
+    font-size: 1.05rem;
+  }
+
+  .navbar__links a::after {
+    display: none;
+  }
+
+  /* Hero stacks into one column, photo first */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero__image {
+    order: -1;
+    max-width: 300px;
+  }
+
+  /* About stacks */
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+}
+
+/* =========================================
+   13. RESPONSIVE: MOBILE
+   ========================================= */
+@media (max-width: 600px) {
+  .section {
+    padding: 3.25rem 0;
+  }
+
+  .hero {
+    padding-top: calc(var(--navbar-height) + 1.5rem);
+  }
+
+  .hero__image {
+    max-width: 240px;
+  }
+
+  .hero__image::before {
+    transform: translate(12px, 12px);
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+  }
+
+  .hero__buttons .btn {
+    text-align: center;
+  }
+
+  .skill__info {
+    flex-wrap: wrap;
+  }
+
+  .contact {
+    padding: 1.5rem;
+  }
+
+  .contact__links .btn {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
